@@ -34,6 +34,20 @@ Path can be varialbe.
 #### $defines( key, value )
 Assotiate the value with the key.
 
+### Example
+
+~~~js
+// app/assets/javascripts/some/folder/first.js
+
+$define( 34 );
+~~~
+
+~~~js
+// app/assets/javascripts/other/folder/b.js
+
+expect( $require( 'some/folder/a' ) ).to.equal( 34 );
+~~~
+
 ## How It Works
 
 ### Preprocessor
