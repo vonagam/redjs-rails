@@ -17,7 +17,8 @@ Add the '.red' extension after '.js' for files that will be using the Redjs depe
 In those files four functions will be available.
 
 #### $require( path_to_file )
-Identical to sprockets '//= require' directive, but additionally will return value associated with file.  
+Identical to sprockets '//= require' directive.
+Return a value associated with the file.  
 Path to file can't be a variable, it must be a string.  
 Can be relative.
 
