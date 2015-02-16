@@ -13,17 +13,17 @@ Require 'redjs-rails' in a javascript manifest before any .red file
 ~~~
 
 ## Usage
-Add the '.red' extension after '.js' for files that will be using ??? Redjs dependecy manager.  
+Add the '.red' extension after '.js' for files that will be using the Redjs dependecy manager.  
 In those files four functions will be available.
 
 #### $require( path_to_file )
 Identical to sprockets '//= require' directive, but additionally will return value associated with specified file.  
-Path to file can't be a variable, it must be string.  
+Path to file can't be a variable, it must be a string.  
 Can be relative.
 
 #### $define( value )
 Assotiate the value with a file.  
-If the value is a function, it execution result will be assotiated.
+If the value is a function, its execution result will be assotiated.
 
 #### $requires( path_to_file )
 Get a value associated with a file, without issuing a sprockets directive.  
@@ -33,13 +33,13 @@ Path can be varialbe.
 #### $defines( key, value )
 Assotiate the value with the key.
 
-## How It Work
+## How It Works
 
 ### Preprocessor
-It search for '$require' and '$define' directive.  
-For '$require' - add specified pathname to required assets.  
-For '$define' - insert a file pathname as first argument.  
-If there is no '$define' in file, then append '$define({ pathname }, 0)' to the end.
+It searches for '$require' and '$define' directives.  
+For '$require' - add the specified pathname to required assets.  
+For '$define' - insert a file pathname as the first argument.  
+If there is no '$define' in a file, then append '$define({ pathname }, 0)' to the end.
 
 ### JS side
 Nothing fancy to see there.  
