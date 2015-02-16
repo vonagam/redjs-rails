@@ -37,13 +37,13 @@ Assotiate the value with the key.
 ### Example
 
 ~~~js
-// app/assets/javascripts/some/folder/first.js
+// app/assets/javascripts/some/folder/a.js.red
 
 $define( 34 );
 ~~~
 
 ~~~js
-// app/assets/javascripts/other/folder/b.js
+// app/assets/javascripts/other/folder/b.js.red
 
 expect( $require( 'some/folder/a' ) ).to.equal( 34 );
 ~~~
