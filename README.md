@@ -39,10 +39,10 @@ Assotiate the value with the key.
 It searches for '$require' and '$define' directives.  
 For '$require' - add the specified pathname to required assets.  
 For '$define' - insert a file pathname as the first argument.  
-If there is no '$define' in a file, then append '$define({ pathname }, 0)' to the end.
+If there is no '$define' in a file, then it appends '$define({ pathname }, 0)' to the end.
 
 ### JS side
 Nothing fancy to see there.  
 Pretty dumb.  
-Because required assets included first, there is no need for asynchronous loading or fancy things like that.  
+Because required assets are included first, there is no need for asynchronous loading or fancy things like that.  
 If you need them for some reason, you can just write your implementation, without including 'redjs-rails' in your js manifest.
