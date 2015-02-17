@@ -17,19 +17,20 @@ Add the '.red' extension after '.js' for files that will be using the Redjs depe
 In those files four functions will be available.
 
 #### $require( path_to_file )
-Identical to sprockets '//= require' directive.
 Return a value associated with the file.  
+Will add the specified file to required ones, identical to the sprockets '//= require' directive.  
 Path to file can't be a variable, it must be a string.  
 Can be relative.
+
+#### $requires( path_to_file )
+Return a value associated with the file.  
+Without issuing a sprockets directive.  
+You must ensure inclusion of required file yourself.  
+Path can be varialbe.
 
 #### $define( value )
 Assotiate the value with a file.  
 If the value is a function, its execution result will be assotiated.
-
-#### $requires( path_to_file )
-Get a value associated with a file, without issuing a sprockets directive.  
-You must ensure inclusion of required file yourself.  
-Path can be varialbe.
 
 #### $defines( key, value )
 Assotiate the value with the key.
@@ -60,4 +61,4 @@ If there is no '$define' in a file, then it appends '$define({ pathname }, 0)' t
 Nothing fancy to see there.  
 Pretty dumb.  
 Because required assets are included first, there is no need for asynchronous loading or fancy things like that.  
-If you need them for some reason, you can just write your implementation, without including 'redjs-rails' in your js manifest.
+If you need them for some reason, you can just write your implementation and replace 'redjs-rails' in your js manifest.
