@@ -16,7 +16,7 @@ module Redjs
 
           unless result =~ /\$defines\s*\(\s*['"]#{ current_path }['"]/
 
-            result += "\n" + "$define('#{ current_path }',0);"
+            result += "\n" + "$define('#{ current_path }',void 0);"
 
           end
 
@@ -32,7 +32,7 @@ module Redjs
 
           end
 
-          context.require_asset asset_path
+          context.require_asset asset_path unless asset_path == current_path
 
           "#{ $1 }#{ asset_path }#{ $3 }"
 
