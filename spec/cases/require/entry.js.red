@@ -1,4 +1,4 @@
-//= require redjs-rails
+//= require redjs-sprockets
 //= require assert
 
 assert( $require( 'require/defined' ), 34 );

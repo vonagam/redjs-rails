@@ -1,14 +1,15 @@
 require 'rails/engine'
 
+
 module Redjs
 
-  module Rails
+  module Platforms
 
-    class Engine < ::Rails::Engine
+    class Rails < ::Rails::Engine
 
       initializer 'redjs_rails.setup_engine', group: :all do | app |
 
-        app.assets.register_engine '.red', Processor
+        Redjs::Sprockets.register app.assets
 
       end
 

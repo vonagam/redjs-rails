@@ -1,15 +1,35 @@
-# redjs-rails
+# redjs-sprockets
 
 ## Installation
 
-Add 'redjs-rails' to a gemfile
+### Common
+Add 'redjs-sprockets' to a gemfile
 ~~~ruby
-gem 'redjs-rails'
+gem 'redjs-sprockets'
 ~~~
 
-Require 'redjs-rails' in a javascript manifest before any .red file
+Require 'redjs-sprockets' in a javascript manifest before any .red file
 ~~~js
-//= require redjs-rails
+//= require redjs-sprockets
+~~~
+
+### Specific
+
+#### Rails
+For Rails that is all.
+
+#### Middleman
+Activate the extension
+~~~ruby
+# config.rb
+activate :redjs_sprockets
+~~~
+
+#### Bare Sprockets
+On any other platform, which include Sprockets, you can activate redjs like this
+~~~ruby
+# pass a Sprockets::Base instance as an argument to the Redjs::Sprockets.register method
+Redjs::Sprockets.register my_sprockets_instance
 ~~~
 
 ## Usage
@@ -55,10 +75,10 @@ expect( $require( 'some/folder/a' ) ).to.equal( 34 );
 It searches for '$require' and '$define' directives.  
 For '$require' - add the specified pathname to required assets.  
 For '$define' - insert a file pathname as the first argument.  
-If there is no '$define' in a file, then it appends '$define({ pathname }, 0)' to the end.
+If there is no '$define' in a file, then it appends '$define({ pathname }, void 0)' to the end.
 
 ### JS side
 Nothing fancy to see there.  
 Pretty dumb.  
 Because required assets are included first, there is no need for asynchronous loading or fancy things like that.  
-If you need them for some reason, you can just write your implementation and replace 'redjs-rails' in your js manifest.
+If you need them for some reason, you can just write your implementation and replace 'redjs-sprockets' in your js manifest.
