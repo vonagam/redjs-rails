@@ -8,9 +8,10 @@ describe 'sprockets' do
 
     @sprockets = Sprockets::Environment.new
 
-    Redjs::Sprockets.register @sprockets
-
     @sprockets.append_path CASES_DIR
+
+    Redjs::Sprockets.register @sprockets
+    Redjs::Sprockets.auto_usage_paths << CASES_DIR + '/preprocessor'
 
   end
 

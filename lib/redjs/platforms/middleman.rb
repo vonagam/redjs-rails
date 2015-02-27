@@ -8,7 +8,9 @@ module Redjs
 
     class Middleman < ::Middleman::Extension
 
-      def initialize ( app, options_hash = {}, &block )
+      option :auto_usage, [], 'Array of paths where the ".red" file extension is auto assumed.' 
+
+      def initialize ( app, options = {}, &block )
 
         super
 
@@ -19,6 +21,8 @@ module Redjs
           Redjs::Sprockets.register sprockets
 
         end
+
+        Redjs::Sprockets.auto_usage_paths += options[ :auto_usage ]
 
       end
 
