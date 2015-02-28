@@ -3,4 +3,4 @@
 
 // it work because of configuration
 
-assert( $require( 'preprocessor/including' ), 'work' );
+assert( $require( 'including' ), 'work' );

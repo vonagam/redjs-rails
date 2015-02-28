@@ -14,6 +14,8 @@ module Redjs
 
         super
 
+        Redjs::Sprockets.auto_usage_paths.merge options[ :auto_usage ]
+
         ::Tilt.register :red, Redjs::Sprockets
 
         app.after_configuration do
@@ -21,8 +23,6 @@ module Redjs
           Redjs::Sprockets.register sprockets
 
         end
-
-        Redjs::Sprockets.auto_usage_paths.merge options[ :auto_usage ]
 
       end
 
