@@ -8,8 +8,8 @@ describe 'redjs' do
 
   it 'red processor registered' do
 
-    expect( @sprockets.engines[ '.red' ] ).to be Redjs::Sprockets
-    expect( @sprockets.paths ).to include Redjs::JAVASCRIPTS_PATH
+    expect( @sprockets.engines[ '.red' ] ).to be RedJS::Sprockets
+    expect( @sprockets.paths ).to include RedJS::JAVASCRIPTS_PATH
 
   end
 

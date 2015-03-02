@@ -1,4 +1,4 @@
-module Redjs
+module RedJS
 
   VERSION = '0.2.2'
   

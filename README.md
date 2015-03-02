@@ -28,12 +28,12 @@ activate :redjs_sprockets
 #### Bare Sprockets
 On any other platform, which include Sprockets, you can activate redjs like this
 ~~~ruby
-# pass a Sprockets::Base instance as an argument to the Redjs::Sprockets.register method
-Redjs::Sprockets.register my_sprockets_instance
+# pass a Sprockets::Base instance as an argument to the RedJS::Sprockets.register method
+RedJS::Sprockets.register my_sprockets_instance
 ~~~
 
 ## Usage
-Add the '.red' extension after '.js' for files that will be using the Redjs dependecy manager.  
+Add the '.red' extension after '.js' for files that will be using the RedJS dependecy manager.  
 In those files four functions will be available.
 
 #### $require( path_to_file )
@@ -60,9 +60,9 @@ Assotiate the value with the key.
 ~~~ruby
 // app/config/redjs.rb
 
-Redjs::Sprockets.auto_usage_paths << Rails.root.join( 'app', 'assets', 'javascripts', 'red' )
+RedJS::Sprockets.auto_usage_paths << Rails.root.join( 'app', 'assets', 'javascripts', 'red' )
 
-# now any js file in app/assets/javascripts/red will be postprocessed by Redjs
+# now any js file in app/assets/javascripts/red will be postprocessed by RedJS
 # regardless of it's extensions
 ~~~
 

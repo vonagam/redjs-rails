@@ -1,7 +1,7 @@
 require 'rails/engine'
 
 
-module Redjs
+module RedJS
 
   module Platforms
 
@@ -9,7 +9,7 @@ module Redjs
 
       initializer 'redjs_rails.setup_engine', group: :all do | app |
 
-        Redjs::Sprockets.register app.assets
+        RedJS::Sprockets.register app.assets
 
       end
 

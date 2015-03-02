@@ -1,7 +1,7 @@
 require 'sprockets'
 require 'pathname'
 
-module Redjs
+module RedJS
 
   JAVASCRIPTS_PATH = Pathname.new( __FILE__ ).dirname.join( 'javascripts' ).to_s
 

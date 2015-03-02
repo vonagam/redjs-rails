@@ -1,7 +1,7 @@
 require 'middleman-core'
 
 
-module Redjs
+module RedJS
 
   module Platforms
 
@@ -13,13 +13,13 @@ module Redjs
 
         super
 
-        Redjs::Sprockets.auto_usage_paths.merge options[ :auto_usage ]
+        RedJS::Sprockets.auto_usage_paths.merge options[ :auto_usage ]
 
-        ::Tilt.register :red, Redjs::Sprockets
+        ::Tilt.register :red, RedJS::Sprockets
 
         app.after_configuration do
 
-          Redjs::Sprockets.register sprockets
+          RedJS::Sprockets.register sprockets
 
         end
 
@@ -32,4 +32,4 @@ module Redjs
 end
 
 
-::Middleman::Extensions.register :redjs_sprockets, Redjs::Platforms::Middleman
+::Middleman::Extensions.register :redjs_sprockets, RedJS::Platforms::Middleman

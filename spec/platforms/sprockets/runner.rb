@@ -8,8 +8,8 @@ GET_SPROCKETS = proc do
 
   sprockets.append_path CASES_DIR
 
-  Redjs::Sprockets.auto_usage_paths << CASES_DIR + '/auto_usage'
-  Redjs::Sprockets.register sprockets
+  RedJS::Sprockets.auto_usage_paths << CASES_DIR + '/auto_usage'
+  RedJS::Sprockets.register sprockets
 
   sprockets
 

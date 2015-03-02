@@ -2,13 +2,13 @@ require 'set'
 
 # not work yet
 
-module Redjs
+module RedJS
 
   class Sprockets
 
     def self.call ( input )
 
-      result = Redjs::Processor.process input[ :filename ], input[ :data ]
+      result = RedJS::Processor.process input[ :filename ], input[ :data ]
 
       required = result[ :required ].map{ | path | input[ :environment ].resolve path }
 
@@ -23,7 +23,7 @@ module Redjs
 
       sprockets.register_engine '.red', self, mime_type: 'application/javascript'
 
-      sprockets.append_path Redjs::JAVASCRIPTS_PATH
+      sprockets.append_path RedJS::JAVASCRIPTS_PATH
 
     end
 

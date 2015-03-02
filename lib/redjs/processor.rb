@@ -1,7 +1,7 @@
 require 'pathname'
 
 
-module Redjs
+module RedJS
 
   class Processor
 

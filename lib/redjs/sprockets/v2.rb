@@ -1,7 +1,7 @@
 require 'set'
 
 
-module Redjs
+module RedJS
 
   class Sprockets < Sprockets::Processor
 
@@ -9,7 +9,7 @@ module Redjs
 
     @processor = proc do | context, data |
 
-      result = Redjs::Processor.process context.logical_path, data
+      result = RedJS::Processor.process context.logical_path, data
 
       result[ :required ].each { | required_path | context.require_asset required_path }
 
@@ -25,7 +25,7 @@ module Redjs
 
     def self.register ( sprockets )
 
-      sprockets.append_path Redjs::JAVASCRIPTS_PATH
+      sprockets.append_path RedJS::JAVASCRIPTS_PATH
 
       auto_usage_paths.each { | auto_usage | sprockets.prepend_path auto_usage }
 

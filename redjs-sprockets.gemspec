@@ -7,7 +7,7 @@ require 'redjs/version'
 Gem::Specification.new do | spec |
 
   spec.name          = 'redjs-sprockets'
-  spec.version       = Redjs::VERSION
+  spec.version       = RedJS::VERSION
   spec.authors       = [ 'Dmitry Maganov' ]
   spec.email         = [ 'vonagam@gmail.com' ]
   spec.summary       = 'JS dependency sugar for Sprockets.'
