@@ -18,10 +18,13 @@ end
 
   if Gem.find_files( gem_name ).empty? == false
 
-    require "specs/#{ gem_name }_spec"
+    require "platforms/#{ gem_name }/runner"
 
     break
 
   end
 
 end
+
+
+require 'specs/redjs_spec'

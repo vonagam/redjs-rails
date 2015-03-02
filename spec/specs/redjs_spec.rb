@@ -1,14 +1,8 @@
-require 'combustion'
-
-Combustion.path = 'spec/platforms/rails'
-Combustion.initialize! :sprockets
-
-
-describe 'rails' do
+describe 'redjs' do
 
   before :all do
 
-    @sprockets = Rails.application.assets
+    @sprockets = GET_SPROCKETS.call
 
   end
 
