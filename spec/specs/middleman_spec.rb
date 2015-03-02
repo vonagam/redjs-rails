@@ -1,8 +1,9 @@
 require 'middleman'
+require 'middleman-core/application.rb'
 require 'redjs-sprockets'
 
 
-describe 'rails' do
+describe 'middleman' do
 
   before :all do
 

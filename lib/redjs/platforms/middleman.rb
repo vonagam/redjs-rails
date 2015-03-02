@@ -1,5 +1,4 @@
 require 'middleman-core'
-require 'pry'
 
 
 module Redjs
