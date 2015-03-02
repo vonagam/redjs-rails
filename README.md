@@ -55,6 +55,17 @@ If the value is a function, its execution result will be assotiated.
 #### $defines( key, value )
 Assotiate the value with the key.
 
+### Usage Without '.red' Extension
+
+~~~ruby
+// app/config/redjs.rb
+
+Redjs::Sprockets.auto_usage_paths << Rails.root.join( 'app', 'assets', 'javascripts', 'red' )
+
+# now any js file in app/assets/javascripts/red will be postprocessed by Redjs
+# regardless of it's extensions
+~~~
+
 ### Example
 
 ~~~js
