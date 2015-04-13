@@ -4,13 +4,11 @@ appraise 'sprockets-2' do
 
 end
 
-=begin doesn't work, not yet
 appraise 'sprockets-3' do
 
-  gem 'sprockets', github: 'sstephenson/sprockets'
+  gem 'sprockets', '~> 3'
 
 end
-=end
 
 appraise 'rails-3' do
 

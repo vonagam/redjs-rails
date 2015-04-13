@@ -9,6 +9,7 @@ end
 
 require 'redjs/version'
 require 'redjs/processor'
+require 'redjs/sprockets/base'
 require 'redjs/sprockets/v' + Sprockets::VERSION[ 0 ]
 
 require 'redjs/platforms/rails' if defined? Rails
