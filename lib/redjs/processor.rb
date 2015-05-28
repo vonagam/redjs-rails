@@ -9,11 +9,15 @@ module RedJS
 
       required = []
 
-      unless data.gsub! /\$define\s*\(/, "\\0'#{ path }',"
+      unless data =~ /\$define\s*\(\s*['"]#{ path }['"]\s*,/
 
-        unless data =~ /\$defines\s*\(\s*['"]#{ path }['"]/
+        unless data.gsub! /\$define\s*\(/, "\\0'#{ path }',"
 
-          data += "\n" + "$define('#{ path }',void 0);"
+          unless data =~ /\$defines\s*\(\s*['"]#{ path }['"]/
+
+            data += "\n" + "$define('#{ path }',void 0);"
+
+          end
 
         end
 
